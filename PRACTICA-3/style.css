@@ -1,0 +1,19 @@
+:root{
+    --color-fondo: #426A5A;
+    --color-superficie: #DDAE7E;
+    --color-texto: #EF6F6C;
+    --color-secundario: #7FB685;
+    --color-exito: #F2C57C;
+
+    --espacio: 1.5rem;
+    --radio: 12px; 
+
+    --duracion-entrada: 0.45s;
+    --duracion-pulso: 1.4s;
+    --timing: ease;
+}
+
+body{
+    margin: 0;
+    background-color:
+}
