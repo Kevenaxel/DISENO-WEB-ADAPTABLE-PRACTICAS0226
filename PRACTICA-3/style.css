@@ -2,10 +2,11 @@
     --color-fondo: #426A5A;
     --color-superficie: #DDAE7E;
     --color-texto: #EF6F6C;
+    --color-acento: #917C78;
     --color-secundario: #7FB685;
     --color-exito: #F2C57C;
 
-    --espacio: 1.5rem;
+    --espaciado: 1.5rem;
     --radio: 12px; 
 
     --duracion-entrada: 0.45s;
@@ -15,5 +16,136 @@
 
 body{
     margin: 0;
-    background-color:
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+}
+
+.pedidos{
+    max-width: 900px;
+    margin: auto;
+    padding: var(--espaciado);
+}
+
+.pedidos_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espaciado);
+}
+
+.pedidos__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--espaciado);
+    margin-top: var(--espaciado);
+}
+
+
+
+.pedido {
+    --color-estado: var(var(--color-acento));
+    background-color: var(--color-superficie);
+    border-radius: var(--espaciado);
+    padding: var(--espaciado);
+    animation: 
+    entrada-pedido
+    var(--duracion-entrada)
+    var(--timing)
+    both;
+}
+
+
+.pedido:nth-child(1){
+    animation-delay: 0s;
+}
+
+.pedido:nth-child(2){
+    animation-delay: 0.24s
+}
+
+.pedido:nth-child(3){
+    animation-delay: 0.48s;
+}
+
+.pedido[data-estado="nuevo"] .pedido__estado {
+    animation:
+    pulso
+    var(--duracion-pulso)
+    ease-in-out
+    infinite;
+}
+
+.pedido[data-estado="nuevo"] {
+    --color-estado: var(--color-texto);
+}
+
+.pedido[data-estado="proceso"] {
+    --color-estado: var(--color-exito);
+}
+
+.pedido {
+    --color-estado: var(--color-acento);
+}
+
+
+
+.pedido[data-estado="listo"] {
+    --color-estado: var(--color-secundario);
+}
+
+.pedido__estado{
+    display: inline-block;
+}
+
+
+
+.estado-sistema__punto{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-exito);
+    border-radius: 50%;
+    animation:
+    estado-activo
+    var(--duracion-pulso)
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes entrada-pedido{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.08);
+        opacity: 0.75;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes estado-activo{
+    0%,
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.35);
+    }
 }
