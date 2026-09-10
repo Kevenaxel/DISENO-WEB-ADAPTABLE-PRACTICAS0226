@@ -1,0 +1,57 @@
+/*
+====================================================
+PRÁCTICA 03 — RESET CSS BASE
+
+Complete este archivo durante la práctica.
+
+Después:
+1. Vincúlelo en el <head>.
+2. Debe aparecer ANTES de practica-03-styles-base.css.
+3. Compruebe el resultado en DevTools.
+
+El reset trabajado en clase considera cinco grupos:
+- selector universal + ::before + ::after
+- ul y ol
+- enlaces
+- imágenes
+- botones
+
+*/
+
+
+/* 1. Modelo de caja y espacios predeterminados */
+* *::before *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 2. Listas */
+ol, ul{
+    list-style: none;
+}
+
+
+/* 3. Enlaces */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 4. Imágenes */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 5. Botones */
+button{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font: inherit;
+}

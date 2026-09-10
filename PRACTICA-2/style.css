@@ -1,0 +1,452 @@
+/*
+====================================================
+PRÁCTICA 03 — CSS BASE
+Caso de uso: Micrositio editorial "Horizonte"
+
+Este archivo contiene estructura, color y layout.
+La tipografía web y el reset forman parte del trabajo
+que se desarrollará durante la práctica.
+====================================================
+*/
+
+:root {
+    /* Paleta base */
+    --color-bg: #f5f2ed;
+    --color-surface: #ffffff;
+    --color-text: #202322;
+    --color-muted: #69706d;
+    --color-primary: #33443c;
+    --color-accent: #b56e4a;
+    --color-border: #d9d5cf;
+
+    /* Layout */
+    --container: 1120px;
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --space-xl: 5rem;
+    --radius: 14px;
+
+    --font-tittle: "PlayFair Display", Georgia, serif;
+    --font-body: "Inter", Arial, serif
+
+    /*
+    TIPOGRAFÍA
+    --font-title:
+    --font-body:
+    --fs-h1:
+    --fs-h2:
+    --fs-body:
+    --fs-small:
+    */
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.35rem;
+    --fs-body: 1rem;
+    --fs-small: 0.75rem
+
+    --lh-tittle: 1.12;
+    --lh-body: 1.65;
+
+    --ls-tittle: 0.02em;
+    --ls-body: 0.08em
+
+}
+
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font: var(--fs-body);
+    font-weight: 400;
+    line-height: var(--lh-body);
+}
+
+
+
+h1, h2, h3 {
+    font: var(--font-title);
+    font-weight: 700;
+    line-height: var(--lh-title);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: var(--ls-title);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    letter-spacing: -0.015em;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    letter-spacing: 1.25;
+}
+
+p {
+    font: var(--font-body);
+    font: var(--fs-body);
+    font-weight: 400;
+    line-height: var(--lh-body);
+}
+
+small {
+    font-size: var(--fs-small);
+    font-weight: 700;
+    list-style: none;
+}
+
+.brand{
+    font-family: var(--fs-small);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: var(--ls-body);
+    text-decoration: uppercase;
+}
+
+.site-nav {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.subscribe-button {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.hero h1 {
+    max-width: 12ch;
+    font-family: var(--font-title);
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.hero p {
+    max-width: 58ch;
+    margin: 1.25rem;
+    color: var(--color-muted);
+    font-family: var(--font-body);
+    line-height: 1.7;
+}
+
+.hero__link{
+    display: inline-block;
+    margin-top: var(--space-md);
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 700;
+
+}
+
+.agenda ul{
+    display: grid;
+    gap: 0.8rem;
+}
+
+.agenda li{
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+
+/* 
+   HEADER
+ */
+
+.site-header {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding: 1.25rem var(--space-md);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+
+.brand {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+.subscribe-button {
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+
+/* 
+   MAIN
+ */
+
+main {
+    max-width: var(--container);
+    margin-inline: auto;
+    background: var(--color-surface);
+}
+
+
+/* 
+   HERO
+ */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: var(--space-lg);
+
+    padding: var(--space-xl) var(--space-md);
+}
+
+
+.hero__content {
+    max-width: 620px;
+}
+
+
+.eyebrow,
+.section-heading small,
+.agenda small,
+.story-card small {
+    color: var(--color-accent);
+}
+
+
+.hero h1 {
+    max-width: 12ch;
+}
+
+
+.hero p {
+    max-width: 58ch;
+    color: var(--color-muted);
+}
+
+
+.hero__link {
+    display: inline-block;
+    margin-top: var(--space-md);
+
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 999px;
+}
+
+
+.hero__media img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+
+.hero__media figcaption {
+    margin-top: 0.5rem;
+    color: var(--color-muted);
+}
+
+
+/* 
+   STORIES
+ */
+
+.stories {
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: var(--space-lg);
+}
+
+
+.section-heading p {
+    color: var(--color-muted);
+}
+
+
+.stories__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+
+.story-card {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+}
+
+
+.story-card > img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+
+.story-card__body {
+    padding: var(--space-md);
+}
+
+
+.story-card__body p {
+    color: var(--color-muted);
+}
+
+
+.story-card__body a {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-weight: 700;
+}
+
+
+/* 
+   AGENDA
+ */
+
+.agenda {
+    margin-inline: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+
+    background: #ece7df;
+    border-radius: var(--radius);
+}
+
+
+.agenda ul {
+    display: grid;
+    gap: 0.8rem;
+}
+
+
+/* 
+   FOOTER
+ */
+
+.site-footer {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding: var(--space-lg) var(--space-md);
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-md);
+
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+
+.site-footer ul {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.site-footer > small {
+    grid-column: 1 / -1;
+    opacity: 0.75;
+}
+
+
+/* 
+   TIPOGRAFÍA
+ */
+
+/*
+Completar durante la práctica.
+
+Aplicar la jerarquía tipográfica a:
+- h1
+- h2
+- h3
+- p
+- small
+- navegación y enlaces cuando corresponda
+
+Considerar:
+- máximo dos familias
+- pesos realmente utilizados
+- line-height
+- letter-spacing
+- font-display: swap si se utiliza @font-face
+*/
+
+
+@media (max-width: 800px) {
+
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        max-width: 18ch;
+    }
+
+    .stories__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer ul {
+        flex-wrap: wrap;
+    }
+}
+
+

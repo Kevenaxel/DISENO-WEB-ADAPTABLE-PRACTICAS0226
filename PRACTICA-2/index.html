@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horizonte — Revista Digital</title>
+    <link rel="stylesheet" href="/PRACTICA-2/reset.css">
+    <link rel="stylesheet" href="/PRACTICA-2/style.css">
+
+    <!--
+        PRÁCTICA 03
+        Paso posterior de la práctica:
+        1. Completar reset-base.css.
+        2. Activar este link ANTES de styles-base.css.
+    -->
+    <!-- <link rel="stylesheet" href="practica-03-reset-base.css"> -->
+
+    <!--
+        Agregue aquí los enlaces necesarios para la fuente o fuentes seleccionadas.
+        Cargue únicamente los pesos que realmente utilizará.
+    -->
+
+    <link rel="stylesheet" href="practica-03-styles-base.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="#">Horizonte</a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#portada">Portada</a></li>
+                <li><a href="#historias">Historias</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+            </ul>
+        </nav>
+
+        <button class="subscribe-button" type="button">
+            Suscribirme
+        </button>
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="portada">
+            <div class="hero__content">
+                <small class="eyebrow">Edición · Septiembre 2026</small>
+
+                <h1>Historias que explican cómo cambia nuestra ciudad</h1>
+
+                <p>
+                    Una selección de cultura, diseño y vida urbana contada por
+                    voces locales.
+                </p>
+
+                <a class="hero__link" href="#historias">
+                    Explorar historias
+                </a>
+            </div>
+
+            <figure class="hero__media">
+                <img
+                    src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80"
+                    alt="Vista urbana con edificios al atardecer"
+                >
+                <figcaption>Ciudad y movimiento — Archivo editorial</figcaption>
+            </figure>
+        </section>
+
+
+        <section class="stories" id="historias">
+            <header class="section-heading">
+                <small>Selección editorial</small>
+                <h2>Historias destacadas</h2>
+                <p>
+                    Tres miradas sobre arquitectura, gastronomía y espacios públicos.
+                </p>
+            </header>
+
+            <div class="stories__grid">
+
+                <article class="story-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                        alt="Interior contemporáneo con mobiliario"
+                    >
+
+                    <div class="story-card__body">
+                        <small>Arquitectura · 6 min</small>
+                        <h3>Espacios que cambian la forma de trabajar</h3>
+                        <p>
+                            Nuevos proyectos buscan equilibrar productividad,
+                            comunidad y bienestar.
+                        </p>
+                        <a href="#">Leer historia</a>
+                    </div>
+                </article>
+
+
+                <article class="story-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+                        alt="Mesa con diferentes platillos"
+                    >
+
+                    <div class="story-card__body">
+                        <small>Gastronomía · 4 min</small>
+                        <h3>La nueva cocina de barrio</h3>
+                        <p>
+                            Emprendimientos pequeños recuperan ingredientes,
+                            recetas y conversaciones locales.
+                        </p>
+                        <a href="#">Leer historia</a>
+                    </div>
+                </article>
+
+
+                <article class="story-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80"
+                        alt="Vista aérea de calles y edificios"
+                    >
+
+                    <div class="story-card__body">
+                        <small>Ciudad · 5 min</small>
+                        <h3>¿Qué hace agradable un espacio público?</h3>
+                        <p>
+                            Sombra, escala, accesibilidad y permanencia son parte
+                            de una experiencia urbana más humana.
+                        </p>
+                        <a href="#">Leer historia</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section class="agenda" id="agenda">
+            <div>
+                <small>Esta semana</small>
+                <h2>Agenda cultural</h2>
+            </div>
+
+            <ul>
+                <li>Exposición de diseño — jueves</li>
+                <li>Conversatorio de arquitectura — viernes</li>
+                <li>Mercado creativo — sábado</li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div>
+            <strong>Horizonte</strong>
+            <p>Revista independiente de ciudad, cultura y diseño.</p>
+        </div>
+
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Archivo</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <small>2026 · Proyecto académico</small>
+    </footer>
+
+</body>
+</html>
