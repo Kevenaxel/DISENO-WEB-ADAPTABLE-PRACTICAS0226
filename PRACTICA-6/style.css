@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.encabezado {
+  padding: 48px 20px;
+  text-align: center;
+  background: #173f5f;
+  color: white;
+}
+
+.encabezado h1 {
+  margin: 8px 0 12px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fbc30b;
+  color: #172033;
+  font-weight: 700;
+}
+
+.contenedor {
+  width: min(100% - 32px, 1000px);
+  margin: 32px auto;
+}
+
+.estado,
+.reto {
+  background: white;
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+#estado-js {
+  color: #b45309;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+}
+
+.precio {
+  color: #0f766e;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.btn-detalle {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 14px;
+  background: #2563eb;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.detalle {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #eef4ff;
+}
+
+.detalle p {
+  margin: 6px 0;
+}
+
+.oculto {
+  display: none;
+}
+
+code {
+  background: #edf2f7;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #64748b;
+}
+
+@media (max-width: 760px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}

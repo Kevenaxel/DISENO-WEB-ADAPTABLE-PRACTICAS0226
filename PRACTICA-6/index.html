@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 06 | JavaScript y DOM</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <p class="etiqueta">Práctica 06</p>
+    <h1 id="titulo-principal">Catálogo interactivo</h1>
+    <p>
+      Usa JavaScript para seleccionar elementos del DOM,
+      escuchar clics y mostrar u ocultar información.
+    </p>
+  </header>
+
+  <main class="contenedor">
+    <section class="estado">
+      <strong>Estado del script:</strong>
+      <span id="estado-js">Esperando JavaScript...</span>
+    </section>
+
+    <section class="productos" aria-label="Productos">
+      <article class="tarjeta">
+        <h2>Auriculares Nova</h2>
+        <p class="precio">$49.99</p>
+        <p>Audio inalámbrico para estudio y entretenimiento.</p>
+
+        <button class="btn-detalle" data-target="detalle-1">
+          Ver detalles
+        </button>
+
+        <div class="detalle oculto" id="detalle-1">
+          <p>Bluetooth 5.3</p>
+          <p>30 horas de batería</p>
+          <p>Cancelación de ruido</p>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <h2>Teclado Orbit</h2>
+        <p class="precio">$64.99</p>
+        <p>Teclado compacto para trabajo y programación.</p>
+
+        <button class="btn-detalle" data-target="detalle-2">
+          Ver detalles
+        </button>
+
+        <div class="detalle oculto" id="detalle-2">
+          <p>Formato compacto</p>
+          <p>Conexión USB-C</p>
+          <p>Iluminación blanca</p>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <h2>Mouse Pulse</h2>
+        <p class="precio">$29.99</p>
+        <p>Mouse ligero con diseño ergonómico.</p>
+
+        <button class="btn-detalle" data-target="detalle-3">
+          Ver detalles
+        </button>
+
+        <div class="detalle oculto" id="detalle-3">
+          <p>6 botones</p>
+          <p>Sensor ajustable</p>
+          <p>Cable trenzado</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="reto">
+      <h2>Lo que debes lograr</h2>
+      <ol>
+        <li>Cambiar el texto de <code>#estado-js</code> cuando cargue el script.</li>
+        <li>Seleccionar todos los botones con <code>querySelectorAll()</code>.</li>
+        <li>Escuchar el evento <code>click</code> con <code>addEventListener()</code>.</li>
+        <li>Leer el atributo <code>data-target</code>.</li>
+        <li>Buscar el panel correspondiente con <code>getElementById()</code>.</li>
+        <li>Mostrar u ocultar el panel usando <code>classList.toggle()</code>.</li>
+        <li>Cambiar el texto del botón entre “Ver detalles” y “Ocultar”.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    Diseño Web Adaptable — JavaScript, DOM y eventos
+  </footer>
+</body>
+</html>
